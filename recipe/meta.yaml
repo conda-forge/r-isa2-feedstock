@@ -1,4 +1,4 @@
-{% set version = "0.3.5" %}
+{% set version = "0.3.6" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/isa2_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/isa2/isa2_{{ version }}.tar.gz
-  sha256: 9b9d41747b14b0e5ddd7b7abb143ab7fc9e818df24995ea680197e6d4002759f
+  sha256: 6256da84dd9a10499f802838c2065ee6e4dcc012b07d21116496ff8aebb65c66
 
 build:
   merge_build_host: true  # [win]
-  number: 1003
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
