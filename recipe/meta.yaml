@@ -1,6 +1,5 @@
 {% set version = "0.3.6" %}
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-isa2
@@ -13,8 +12,7 @@ source:
   sha256: 6256da84dd9a10499f802838c2065ee6e4dcc012b07d21116496ff8aebb65c66
 
 build:
-  merge_build_host: true  # [win]
-  number: 2
+  number: 3
   rpaths:
     - lib/R/lib/
     - lib/
@@ -35,7 +33,6 @@ requirements:
     - r-lattice
   run:
     - r-base
-    - {{ native }}gcc-libs         # [win]
     - r-lattice
 
 test:
